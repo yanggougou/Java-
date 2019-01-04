@@ -1,0 +1,11 @@
+public class forchar {
+public static void main(String[] args) {
+	char a='T';
+	char b='我';
+	char c='\u0064';
+	String d="kkkk";
+	System.out.println(a+b);//25189
+	System.out.println(""+a+b);//T我
+	System.out.println(c+d);//dkkkk
+}
+}

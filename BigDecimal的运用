@@ -1,0 +1,12 @@
+import java.math.*;
+public class bigdate {
+public static void main(String[] args) {
+	BigDecimal bd=new BigDecimal(1.0);
+	bd=bd.subtract(BigDecimal.valueOf(0.1));//0.9
+	bd=bd.divide(BigDecimal.valueOf(10));//0.09
+	BigDecimal bd2=new BigDecimal(0.9/10);
+	System.out.println(bd);
+	System.out.println(bd2);
+	System.out.println(bd2.equals(bd));
+}
+}

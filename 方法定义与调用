@@ -16,7 +16,7 @@ public class Haha {
 	{
 		return(a+b);
 	}
-	static void fun() {//static方法是类方法，同一个类中可直接调用，不同类可通过方法名调用
+	static void fun() {//static方法是类方法，同一个类中可直接调用，不同类可通过类名调用
 		int count=0;
 		boolean flag=true,countflag=true;
 		for(int i=3;i<500;i++)

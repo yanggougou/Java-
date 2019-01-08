@@ -1,0 +1,41 @@
+import java.util.Scanner;
+public class Haha {
+	public static void main(String[] args) {
+		Computer com=new Computer();
+		com.logo="联想";
+		com.size=14;
+		Scanner scanner=new Scanner(System.in);
+		String id1=scanner.next();
+		String name1=scanner.next();
+		int age1=scanner.nextInt();
+		Student student=new Student(id1, name1, age1);
+		student.computer=com;
+		student.showmsg();
+		student.study();
+		student.computer.play();
+	}
+}
+class Student{
+	String id;
+	String name;
+	int age;
+	Computer computer;
+	Student(String id1,String name1,int age1){
+		id=id1;
+		name=name1;
+		age=age1;
+	}
+	void study() {
+		System.out.println("我正在使用："+computer.logo+"电脑学习");
+	}
+	void showmsg(){
+		System.out.println("学号："+id+"\t姓名"+name+"\t年龄："+age);
+	}
+}
+class Computer{
+	String logo;
+	int size;
+	void play() {
+		System.out.println("在玩游戏呢！干哈？");
+	}
+}

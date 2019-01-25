@@ -1,0 +1,38 @@
+package com.ting;//非注释性语句第一句
+import static java.lang.Math.*;//静态导入（类名导入）
+public class Word extends jiaotong{
+	Word()
+	{
+		System.out.println("停止！");
+	}
+	void dojob()
+	{
+		System.out.println("工作烦死了！");
+	}
+	public static void main(String[] args) {
+		System.out.println(PI);
+		jiaotong word =new Word();
+		System.out.println(word instanceof Object);
+		word.dojob();
+		word=new jiaotong();
+		word.dojob();
+	}
+}
+//override：重写，子类自身的行为替换父类的行为
+class jiaotong{
+	jiaotong()
+	{
+		System.out.println("跑！");
+	}
+	void dojob() {
+		System.out.println("我很乐意工作！");
+	}
+}
+结果：
+3.141592653589793
+跑！
+停止！
+true
+工作烦死了！
+跑！
+我很乐意工作！

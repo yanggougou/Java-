@@ -1,0 +1,19 @@
+public static void main(String[] args) {
+		int[] array01;//声明数组
+		array01=new int[10];//给数组分配空间
+		array01[0]=4;
+		array01[1]=3;
+		array01[2]=2;
+		User[] arrUser=new User[3];
+		arrUser[0]=new User("duting","0100",'女');
+		arrUser[1]=new User("suting","0101",'女');
+		arrUser[2]=new User("aiting","0102",'男');
+		//静态初始化
+		User[] arrUser02= {new User("duting","0100",'女'),new User("suting","0101",'女')};
+		//foreach
+		for(int m:array01)
+		{
+			System.out.println(m);
+		}
+	}
+}

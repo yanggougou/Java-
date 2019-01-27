@@ -1,0 +1,39 @@
+//匿名内部类（一般用在监听器中）：父类构造器（实参列表）  实现接口（）{   匿名内部类块体；}
+public class outer {
+
+	public static void main(String[] args) {
+		//实例化非静态内部类对象
+		Face01 face01=new Face01();
+		/**
+		 * 错误例子：
+		 * Nose nose=face.new Nose();
+		 * face.Nose nose=face.new Nose();
+		 * **/ 
+		Face01.Nose nose1=face01.new Nose();//非静态内部类对象从属于外部类对象。错误：new face01.Nose();
+		nose1.breath();
+		//静态内部类实例化
+		Face02.Nose nose2=new Face02.Nose();//当一个静态内部类对象存在，并不一定存在外部类对象
+		nose2.breath();
+	}
+
+}
+class Face01{
+	int type=3;
+	class Nose{//非静态内部类
+	String typeString;
+	void breath() {
+		System.out.println(Face01.this.type);//调用外部属性：有冲突属性的情况
+		System.out.println("呼吸1");
+	}
+	}
+}
+class Face02{//静态内部类可以有非静态方法
+	static int type=3;
+	static class Nose{//静态内部类
+	String typeString;
+	static void breath() {//静态方法必须在静态类中
+		System.out.println(Face02.type);//静态方法中只可使用静态属性
+		System.out.println("呼吸2");
+	}
+	}
+}

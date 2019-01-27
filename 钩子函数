@@ -1,0 +1,26 @@
+import java.awt.Graphics;
+//CALLBACK HOOK 钩子函数
+public class PaintFream{
+	public static void drawFream(MyFream f) {
+		System.out.println("启动线程");
+		System.out.println("增加循环");
+		System.out.println("查看消息栈");
+		//画窗口
+		f.paint();//挂号钩子
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		drawFream(new GameFream());
+	}
+}
+class MyFream{
+	public void paint() {
+		// TODO Auto-generated method stub
+		System.out.println("把自己窗口画出来");
+	}
+}
+class GameFream extends MyFream{
+	public void paint() {
+		System.out.println("GameFream draw it!");
+	}
+}

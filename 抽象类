@@ -1,0 +1,31 @@
+public class AbstuctTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Animal animal=new Cat();//此处不能new Animal();即不能实例化抽象类，只能被子类继承
+		animal.run();
+	}
+
+}
+public abstract class Animal {
+	public abstract void run();
+	private void breath() {
+		// TODO Auto-generated method stub
+		System.out.println("抽象类可以有普通方法，但抽象方法必须位于抽象类！");
+		run();//多态的运用：父类引用调用子类对象
+	}
+}
+class Cat extends Animal{
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		System.out.println("猫跑");
+	}
+}
+class Dog extends Animal{
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		System.out.println("狗跑");
+	}
+}
